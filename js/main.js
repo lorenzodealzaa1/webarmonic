@@ -23,8 +23,6 @@ revealEls.forEach(el => revealObserver.observe(el));
   const slides = Array.from(track.children);
   const realCount = slides.length - 2; // se restan los dos clones (loop infinito)
   const dots = Array.from(slider.querySelectorAll('.product-slider-dots .dot'));
-  const prevBtn = slider.querySelector('.slider-arrow-prev');
-  const nextBtn = slider.querySelector('.slider-arrow-next');
 
   let currentIndex = 1; // arranca en la primera imagen real (índice 0 es el clon)
   let isDragging = false;
@@ -50,12 +48,42 @@ revealEls.forEach(el => revealObserver.observe(el));
     }
   });
 
-  function next() { goTo(currentIndex + 1); }
-  function prev() { goTo(currentIndex - 1); }
+  // Si el transitionend no llegó a disparar (p. ej. con la pestaña en segundo
+  // plano las transiciones no corren), se salta al índice real antes de avanzar
+  // para que el loop no se vaya de rango.
+  function next() {
+    if (currentIndex >= realCount + 1) {
+      goTo(1, true);
+      void track.offsetWidth; // fuerza el reflow para que el salto sea instantáneo
+    }
+    goTo(currentIndex + 1);
+  }
+  function prev() {
+    if (currentIndex <= 0) {
+      goTo(realCount, true);
+      void track.offsetWidth;
+    }
+    goTo(currentIndex - 1);
+  }
 
-  if (nextBtn) nextBtn.addEventListener('click', next);
-  if (prevBtn) prevBtn.addEventListener('click', prev);
-  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i + 1)));
+  // ---- Autoplay: las fotos pasan solas ----
+  const AUTOPLAY_MS = 4000;
+  let autoplayTimer = setInterval(next, AUTOPLAY_MS);
+  function restartAutoplay() {
+    clearInterval(autoplayTimer);
+    autoplayTimer = setInterval(next, AUTOPLAY_MS);
+  }
+
+  // Con la pestaña oculta se pausa el autoplay (las transiciones no corren ahí).
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearInterval(autoplayTimer);
+    else restartAutoplay();
+  });
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => {
+    goTo(i + 1);
+    restartAutoplay();
+  }));
 
   // ---- Swipe táctil ----
   track.addEventListener('touchstart', (e) => {
@@ -63,6 +91,7 @@ revealEls.forEach(el => revealObserver.observe(el));
     startX = e.touches[0].clientX;
     deltaX = 0;
     track.classList.add('no-transition');
+    clearInterval(autoplayTimer); // se pausa mientras el dedo está apoyado
   }, { passive: true });
 
   track.addEventListener('touchmove', (e) => {
@@ -80,6 +109,7 @@ revealEls.forEach(el => revealObserver.observe(el));
     if (deltaX < -threshold) next();
     else if (deltaX > threshold) prev();
     else goTo(currentIndex);
+    restartAutoplay();
   });
 
   goTo(1, true);
