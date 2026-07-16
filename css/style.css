@@ -256,31 +256,34 @@ header{
   display: block;
 }
 
-/* Botón de play sobre el poster */
-.video-play{
+/* Botón sutil para activar el audio del video */
+.video-audio{
   position:absolute;
-  inset: 0;
-  margin: auto;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  background: rgba(255,255,255,0.92);
+  bottom: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
   display:flex;
   align-items:center;
-  justify-content:center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  transition: transform var(--transition-fast), background var(--transition-fast);
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 100px;
+  background: rgba(20,17,15,0.55);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  white-space: nowrap;
 }
-.video-play svg{
-  width: 28px;
-  height: 28px;
-  fill: var(--color-gold-dark);
-  margin-left: 3px;
-}
-.video-play:hover{ transform: scale(1.08); background: var(--color-white); }
-.hero-video.is-playing .video-play{ display:none; }
+.video-audio svg{ width: 15px; height: 15px; min-width: 15px; stroke: currentColor; }
+.video-audio:hover{ background: rgba(20,17,15,0.78); }
+.video-audio .icon-on{ display:none; }
+.hero-video.audio-on .icon-on{ display:block; }
+.hero-video.audio-on .icon-off{ display:none; }
 
 /* FORMULARIO EN EL HERO */
 .hero-form{ position: sticky; top: 6.5rem; }

@@ -14,25 +14,32 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ---------- VIDEO DEL HERO (click para reproducir con sonido) ----------
+// ---------- VIDEO DEL HERO (autoplay silenciado + botón de audio) ----------
 (function () {
   const wrap = document.getElementById('heroVideo');
   if (!wrap) return;
 
   const video = wrap.querySelector('video');
-  const playBtn = wrap.querySelector('.video-play');
+  const audioBtn = wrap.querySelector('.video-audio');
+  const label = audioBtn.querySelector('span');
 
-  playBtn.addEventListener('click', () => {
-    wrap.classList.add('is-playing');
-    video.controls = true;
-    video.play();
+  // El navegador puede bloquear o pausar el autoplay (ahorro de energía,
+  // pestaña en segundo plano): se reintenta al cargar y al volver a la pestaña.
+  function tryPlay() {
+    const p = video.play();
+    if (p && p.catch) p.catch(function () {});
+  }
+  tryPlay();
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && video.paused) tryPlay();
   });
 
-  // Al terminar vuelve al estado inicial (poster + botón de play).
-  video.addEventListener('ended', () => {
-    wrap.classList.remove('is-playing');
-    video.controls = false;
-    video.currentTime = 0;
+  audioBtn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    wrap.classList.toggle('audio-on', !video.muted);
+    label.textContent = video.muted ? 'Activar audio' : 'Silenciar';
+    audioBtn.setAttribute('aria-label', label.textContent);
+    if (!video.muted && video.paused) video.play();
   });
 })();
 

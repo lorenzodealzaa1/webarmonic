@@ -124,9 +124,11 @@ src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"
     </p>
 
     <div class="hero-video" id="heroVideo">
-      <video src="assets/video/mk1000-hero.mp4" preload="metadata" playsinline poster="assets/img/video-poster.jpg" aria-label="Video de presentación del STUDIO MK-1000"></video>
-      <button type="button" class="video-play" aria-label="Reproducir video con sonido">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.5v13l10-6.5z"/></svg>
+      <video src="assets/video/mk1000-hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/img/video-poster.jpg" aria-label="Video de presentación del STUDIO MK-1000"></video>
+      <button type="button" class="video-audio" aria-label="Activar audio">
+        <svg class="icon-off" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+        <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <span>Activar audio</span>
       </button>
     </div>
   </div>
