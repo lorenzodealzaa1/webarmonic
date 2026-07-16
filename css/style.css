@@ -508,7 +508,7 @@ header{
   margin: 0;
   display:flex;
   flex-direction:column;
-  gap: 1.1rem;
+  gap: 0.65rem;
   text-align:left;
   box-shadow: 0 24px 60px rgba(23,19,16,0.14);
 }
@@ -589,7 +589,9 @@ header{
   pointer-events:none;
 }
 
-.form-group .error-msg{ font-size: 0.8rem; color: #E28B7D; min-height: 1rem; display:block; }
+/* El mensaje de error no reserva espacio cuando está vacío */
+.form-group .error-msg{ font-size: 0.8rem; color: #E28B7D; display:block; }
+.form-group .error-msg:empty{ display:none; }
 
 .form-divider{ height: 1px; background: rgba(255,255,255,0.09); margin: -0.25rem 0 0.15rem; }
 
@@ -984,7 +986,7 @@ footer::before{
   .form-card{
     padding: 2rem 1.35rem;
     border-radius: 18px;
-    gap: 1.35rem;
+    gap: 0.65rem;
   }
   .form-head h2{ font-size: 1.35rem; }
   #form-success, #form-error{ padding: 1.2rem 1.4rem; }
