@@ -1,3 +1,7 @@
+// ---------- AÑO DINÁMICO EN EL FOOTER ----------
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // ---------- REVEAL ON SCROLL ----------
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {

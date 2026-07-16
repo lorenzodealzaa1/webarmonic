@@ -3,9 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARMONIC | STUDIO MK-1000 — Experiencia privada de escucha</title>
-<meta name="description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta, Buenos Aires. Cupos limitados, solo con reserva previa.">
+<title>ARMONIC | STUDIO MK-1000 — Escuchalo en vivo en Recoleta</title>
+<meta name="description" content="Reservá tu lugar para escuchar el STUDIO MK-1000 en vivo, en una experiencia privada de audio en Recoleta, Buenos Aires. Cupos limitados, solo con reserva previa. 6 cuotas sin interés y envío gratis a todo el país.">
+<meta name="keywords" content="ARMONIC, STUDIO MK-1000, parlante premium, experiencia de escucha, audio de alta fidelidad, Recoleta, Buenos Aires, reservar demostración">
+<meta name="author" content="ARMONIC">
+<meta name="robots" content="index, follow">
+
+<!-- ============================================================ -->
+<!-- IMPORTANTE: reemplazá esta URL por tu dominio final de Vercel -->
+<!-- (ej: https://tudominio.com). Se usa para compartir en redes.  -->
+<link rel="canonical" href="https://webarmonic.vercel.app/">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARMONIC">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://webarmonic.vercel.app/">
+<meta property="og:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en vivo en Recoleta">
+<meta property="og:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta. Cupos limitados, solo con reserva previa.">
+<meta property="og:image" content="https://webarmonic.vercel.app/assets/img/og-armonic.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ARMONIC STUDIO MK-1000">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en vivo en Recoleta">
+<meta name="twitter:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta. Cupos limitados, solo con reserva previa.">
+<meta name="twitter:image" content="https://webarmonic.vercel.app/assets/img/og-armonic.jpg">
+<!-- ============================================================ -->
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#AD8B5E">
+
+<link rel="preload" href="assets/fonts/RethinkSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Datos estructurados (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "ARMONIC",
+  "description": "Experiencia privada de escucha del parlante premium STUDIO MK-1000 en Recoleta, Buenos Aires. Demostraciones con reserva previa.",
+  "image": "https://webarmonic.vercel.app/assets/img/og-armonic.jpg",
+  "url": "https://webarmonic.vercel.app/",
+  "telephone": "+54 9 11 6099-1023",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Recoleta",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "areaServed": "AR",
+  "makesOffer": {
+    "@type": "Offer",
+    "priceCurrency": "ARS",
+    "price": "2580000",
+    "itemOffered": {
+      "@type": "Product",
+      "name": "STUDIO MK-1000",
+      "brand": "ARMONIC",
+      "category": "Parlante / Sistema de audio premium"
+    }
+  }
+}
+</script>
 
 <!-- ============================================================ -->
 <!-- META PIXEL CODE - PEGAR ACÁ -->
@@ -38,68 +106,118 @@ src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"
   <nav class="nav" id="mainNav">
     <a href="#" class="logo" aria-label="ARMONIC — inicio"><img src="assets/img/logo-armonic-negro.png" alt="ARMONIC"></a>
     <ul class="nav-links">
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#producto">Producto</a></li>
-      <li><a href="#reserva">Reserva</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#experiencia">La experiencia</a></li>
+      <li><a href="#producto">El parlante</a></li>
+      <li><a href="#visita">La visita</a></li>
     </ul>
-    <a href="#reserva" class="btn btn-primary nav-cta">Reservar visita</a>
+    <a href="#reserva" class="btn btn-primary nav-cta">Reservar mi lugar</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO + FORMULARIO -->
 <section class="hero">
   <div class="hero-copy reveal">
-    <span class="eyebrow">Experiencia privada de escucha</span>
-    <h1>Viví ARMONIC en persona.</h1>
-    <p>Una experiencia privada de escucha para conocer el STUDIO MK-1000 en Recoleta.</p>
-    <p class="support-text">Por tratarse de una pieza de audio premium, las demostraciones se realizan únicamente con reserva previa.</p>
-    <div class="hero-buttons">
-      <a href="#reserva" class="btn btn-primary">Reservar mi lugar</a>
+    <h1>Escuchá el <span class="gold">STUDIO MK-1000</span> en vivo.</h1>
+    <p>No es una demo de producto: es sentarte, cerrar los ojos y descubrir cómo suena tu música cuando cada detalle está pensado para emocionarte.</p>
+    <ul class="trust-chips">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Recoleta, Buenos Aires</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Solo con reserva previa</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg>Cupos limitados</li>
+    </ul>
+    <div class="hero-media">
+      <img src="assets/img/mk1000-hero.jpeg" alt="ARMONIC STUDIO MK-1000">
     </div>
   </div>
-  <div class="hero-visual reveal">
-    <img src="assets/img/mk1000-hero.jpeg" alt="ARMONIC STUDIO MK-1000">
+
+  <!-- FORMULARIO DE RESERVA (tarjeta premium, arriba de todo) -->
+  <div class="hero-form reveal" id="reserva">
+    <!--
+      ================================================================
+      La reserva se coordina por WhatsApp: al enviar, se abre el chat con
+      los datos ya cargados (ver js/main.js). Los IDs de los campos y de
+      los mensajes de éxito/error NO deben cambiar: el JS depende de ellos.
+
+      Para conectar un backend (Formspree / Google Sheets / Zapier) más
+      adelante, ver las notas en js/main.js.
+      ================================================================
+    -->
+    <form id="reserva-form" name="reserva" novalidate class="form-card" aria-labelledby="reserva-title">
+      <div class="form-head">
+        <h2 id="reserva-title">Dejanos tus datos y coordinamos tu visita.</h2>
+        <p>Te contactamos para confirmar día y horario. Sin costo y sin compromiso de compra.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+        <span class="error-msg" id="err-nombre"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono / WhatsApp</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="11 1234 5678">
+        <span class="error-msg" id="err-telefono"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com">
+        <span class="error-msg" id="err-email"></span>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn-form">
+          Reservar mi lugar
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <span class="form-note">Coordinamos por WhatsApp en el día.</span>
+      </div>
+    </form>
+
+    <div id="form-success">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+      <span>Gracias. Recibimos tu solicitud y nos vamos a contactar para confirmar tu reserva.</span>
+    </div>
+
+    <div id="form-error">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.3v.01"/></svg>
+      <span>No pudimos enviar tu solicitud. Probá de nuevo en unos segundos o escribinos directamente por WhatsApp.</span>
+    </div>
   </div>
 </section>
 
 <!-- EXPERIENCIA -->
 <section class="section" id="experiencia">
-  <h2 class="section-title reveal">Una escucha diseñada para decidir con seguridad.</h2>
+  <h2 class="section-title section-title-center reveal">Una escucha íntima, sin apuro y sin vendedores encima.</h2>
   <div class="benefits-grid">
     <div class="benefit-card reveal">
       <div class="icon-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 14v3a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 1z"/><path d="M3 14v3a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 1z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4M8 6.5v11M12 3v18M16 6.5v11M20 10v4"/></svg>
       </div>
       <span class="num">01</span>
-      <h3>Prueba presencial del sonido</h3>
-      <p>Escuchá el STUDIO MK-1000 en un ambiente pensado para apreciar cada detalle.</p>
+      <h3>Un ambiente para sentir el sonido</h3>
+      <p>Un espacio preparado para que escuches el STUDIO MK-1000 como se merece: sin ruido, sin distracciones, solo la música.</p>
     </div>
     <div class="benefit-card reveal">
       <div class="icon-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="7" rx="2"/><rect x="17.5" y="13" width="4" height="7" rx="2"/><path d="M18 20a3 3 0 0 1-3 3h-3"/></svg>
       </div>
       <span class="num">02</span>
-      <h3>Asesoramiento personalizado</h3>
-      <p>Un especialista te acompaña durante toda la experiencia, sin apuro.</p>
+      <h3>Un especialista te acompaña</h3>
+      <p>Traé tu música favorita. Un especialista te guía durante toda la experiencia, sin apuro y sin ninguna presión de compra.</p>
     </div>
     <div class="benefit-card reveal">
       <div class="icon-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 5-9 13L3 8z"/><path d="M3 8h18M9 3 7.5 8 12 21M15 3l1.5 5L12 21"/></svg>
       </div>
       <span class="num">03</span>
-      <h3>Espacio exclusivo con cupos limitados</h3>
-      <p>Encuentros reducidos para garantizar atención y comodidad.</p>
+      <h3>Un encuentro exclusivo en Recoleta</h3>
+      <p>Turnos reducidos y personalizados para que la atención sea 100% tuya. Por eso trabajamos únicamente con reserva previa.</p>
     </div>
   </div>
-</section>
-
-<!-- INTRO PRODUCTO -->
-<section class="section product-intro">
-  <h2 class="product-highlight reveal">Tu próxima experiencia de sonido premium para tu hogar comienza desde cuotas de $430.000. <span class="product-highlight-emphasis">Descubrí una nueva forma de vivir la música.</span></h2>
 </section>
 
 <!-- PRODUCTO -->
@@ -128,112 +246,52 @@ src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="product-copy reveal">
-      <span class="eyebrow">El producto</span>
       <h2>STUDIO MK-1000</h2>
-      <p>Más que un sistema de audio, una pieza que transforma el espacio.</p>
-      <ul class="specs-list">
-        <li>
-          <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
-          <div class="spec-text"><span class="spec-label">Potencia</span>400W RMS</div>
-        </li>
-        <li>
-          <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
-          <div class="spec-text"><span class="spec-label">Pico</span>1000W potencia pico</div>
-        </li>
-        <li>
-          <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="spec-text"><span class="spec-label">Woofer</span>10 pulgadas</div>
-        </li>
-        <li>
-          <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a8 8 0 0 1 12 0M9 12a4 4 0 0 1 6 0M12 15.5v.5"/></svg></div>
-          <div class="spec-text"><span class="spec-label">Conectividad</span>Bluetooth 5.4</div>
-        </li>
-      </ul>
-      <div class="price-tag">
-        <span>Valor</span>
-        $2.580.000 ARS
+      <p>Más que un sistema de audio, una pieza que transforma el espacio. Diseño que enamora a la vista y un sonido que te hace escuchar tus canciones como si fuera la primera vez.</p>
+
+      <div class="price-block">
+        <span class="price-label">Valor de contado</span>
+        <span class="price-value">$2.580.000 <span class="price-cur">ARS</span></span>
       </div>
+
+      <div class="offer-badge">
+        <div class="offer-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <span><strong>6 cuotas sin interés</strong>todos los días</span>
+        </div>
+        <div class="offer-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg>
+          <span><strong>Envío gratis</strong>a todo el país</span>
+        </div>
+      </div>
+
       <a href="#reserva" class="btn btn-primary">Reservar mi lugar</a>
     </div>
   </div>
 </section>
 
-<!-- INFO DEL EVENTO -->
-<section class="section" id="evento">
-  <h2 class="section-title reveal">Visitanos en Recoleta y coordiná<br>tu experiencia de escucha con nosotros.</h2>
-</section>
-
-<!-- FORMULARIO DE RESERVA -->
-<section class="section reserve-section" id="reserva">
-  <div class="reserve-intro reveal">
-    <span class="eyebrow">Reserva</span>
-    <h2 class="section-title">Solicitá tu reserva.</h2>
-    <p class="section-subtitle">Viví la experiencia ARMONIC. Completá tus datos y coordinaremos tu visita personalizada.</p>
+<!-- CÓMO ES LA VISITA -->
+<section class="section visit-section" id="visita">
+  <h2 class="section-title section-title-center reveal">Reservás, coordinamos y te esperamos en Recoleta.</h2>
+  <div class="visit-steps">
+    <div class="visit-step reveal">
+      <span class="step-num">1</span>
+      <h3>Dejás tus datos</h3>
+      <p>Completás el formulario y en el día te escribimos por WhatsApp para coordinar.</p>
+    </div>
+    <div class="visit-step reveal">
+      <span class="step-num">2</span>
+      <h3>Elegís tu momento</h3>
+      <p>Acordamos un día y horario que te quede cómodo. La visita es sin costo.</p>
+    </div>
+    <div class="visit-step reveal">
+      <span class="step-num">3</span>
+      <h3>Lo escuchás en vivo</h3>
+      <p>Te recibimos, ponés tu música y vivís el STUDIO MK-1000 a tu ritmo.</p>
+    </div>
   </div>
-
-  <!--
-    ================================================================
-    CONEXIÓN A BACKEND / FORMSPREE / GOOGLE SHEETS / ZAPIER:
-
-    Opción A (Formspree):
-    Cambiar la etiqueta <form> de abajo por:
-      <form id="reserva-form" action="https://formspree.io/f/TU_ID" method="POST">
-    y en la función handleSubmit() de js/main.js, quitar el "return"
-    que corta el envío real (está marcado más abajo).
-
-    Opción B (Google Sheets vía Apps Script) o Zapier (Webhook):
-    Dentro del listener de submit en js/main.js, reemplazar el bloque
-    comentado "// ENVÍO A BACKEND (reemplazar acá)" por un fetch() como:
-
-      fetch("URL_DE_TU_ENDPOINT", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-
-    Mientras no conectes ningún endpoint, el formulario funciona
-    en modo local: valida los campos, muestra el mensaje de éxito
-    y dispara el evento Lead del Pixel (si ya lo pegaste en el head).
-    ================================================================
-  -->
-  <form id="reserva-form" novalidate class="form-card reveal">
-    <div class="form-group">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
-      <span class="error-msg" id="err-nombre"></span>
-    </div>
-
-    <div class="form-group">
-      <label for="telefono">Teléfono / WhatsApp</label>
-      <input type="tel" id="telefono" name="telefono" placeholder="11 1234 5678">
-      <span class="error-msg" id="err-telefono"></span>
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="tu@email.com">
-      <span class="error-msg" id="err-email"></span>
-    </div>
-
-    <div class="form-divider"></div>
-
-    <div class="form-submit">
-      <button type="submit" class="btn-form">
-        Solicitar reserva
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <span class="form-note">Te contactamos para confirmar día y horario.</span>
-    </div>
-  </form>
-
-  <div id="form-success">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
-    <span>Gracias. Recibimos tu solicitud y nos vamos a contactar para confirmar tu reserva.</span>
-  </div>
-
-  <div id="form-error">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.3v.01"/></svg>
-    <span>No pudimos enviar tu solicitud. Probá de nuevo en unos segundos o escribinos directamente por WhatsApp.</span>
+  <div class="visit-cta reveal">
+    <a href="#reserva" class="btn btn-primary">Quiero reservar mi lugar</a>
   </div>
 </section>
 
@@ -246,28 +304,57 @@ src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner reveal">
-    <div class="footer-brand">
+    <div class="footer-col footer-brand">
       <div class="footer-logo-wrap">
-        <img src="assets/img/logo-armonic-blanco.png" alt="ARMONIC" class="footer-logo">
+        <img src="assets/img/logo-armonic-blanco.png" alt="ARMONIC — Audio premium STUDIO MK-1000" class="footer-logo">
       </div>
+      <p class="footer-desc">ARMONIC crea experiencias privadas de escucha en Recoleta, Buenos Aires. Descubrí el <strong>STUDIO MK-1000</strong>, un parlante premium de alta fidelidad, en vivo y con reserva previa.</p>
       <div class="footer-social">
-        <!-- Reemplazar por el usuario real de Instagram -->
-        <a href="https://www.instagram.com/veylor.store/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+        <a href="https://www.instagram.com/veylor.store/" target="_blank" rel="noopener" class="social-icon" aria-label="Seguir a ARMONIC en Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.7" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://wa.link/kmg7oh" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+        <a href="https://wa.link/kmg7oh" target="_blank" rel="noopener" class="social-icon" aria-label="Escribir a ARMONIC por WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a8.5 8.5 0 0 0-7.4 12.7L3 21l5.5-1.4A8.5 8.5 0 1 0 12 3z"/><path d="M8.6 9.4c.2-.4.4-.5.7-.5.2 0 .4 0 .5.4.2.5.6 1.4.6 1.5.1.1.1.3 0 .4-.1.2-.2.3-.3.4-.2.2-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.8.1 2.1-.1.2-.2.4-.2.5 0 .2.2 1 .9 1.2 1.1.2.2.2.3.1.6-.2.3-.8.8-1.5.9-.7.1-1.3 0-2.4-.5-1.7-.8-2.8-2.4-2.9-2.5-.1-.1-.8-1.1-.8-2.1 0-1 .5-1.5.7-1.7z"/></svg>
         </a>
       </div>
     </div>
-    <div class="footer-meta">
-      <div class="footer-powered">Powered by <span>Veylor</span></div>
-      <ul class="footer-links">
-        <li><a href="#">Términos y Condiciones</a></li>
-        <li><a href="#">Política de Privacidad</a></li>
-        <li><a href="https://wa.link/kmg7oh" target="_blank" rel="noopener">Contacto</a></li>
+
+    <nav class="footer-col footer-nav-col" aria-label="Navegación del sitio">
+      <h2 class="footer-title">Navegación</h2>
+      <ul class="footer-nav">
+        <li><a href="#experiencia">La experiencia de escucha</a></li>
+        <li><a href="#producto">Parlante STUDIO MK-1000</a></li>
+        <li><a href="#visita">Cómo es la visita</a></li>
+        <li><a href="#reserva">Reservar mi lugar</a></li>
       </ul>
+    </nav>
+
+    <div class="footer-col footer-contact-col">
+      <h2 class="footer-title">Contacto</h2>
+      <address class="footer-contact">
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Recoleta, Buenos Aires, Argentina
+        </p>
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a8.5 8.5 0 0 0-7.4 12.7L3 21l5.5-1.4A8.5 8.5 0 1 0 12 3z"/></svg>
+          <a href="https://wa.link/kmg7oh" target="_blank" rel="noopener">WhatsApp: +54 9 11 6099-1023</a>
+        </p>
+        <p class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.7" fill="currentColor" stroke="none"/></svg>
+          <a href="https://www.instagram.com/veylor.store/" target="_blank" rel="noopener">@veylor.store</a>
+        </p>
+      </address>
     </div>
+  </div>
+
+  <div class="footer-bottom reveal">
+    <span class="footer-copy">© <span id="footer-year">2026</span> ARMONIC · STUDIO MK-1000. Todos los derechos reservados.</span>
+    <div class="footer-powered">Powered by <span>Veylor</span></div>
+    <ul class="footer-legal">
+      <li><a href="#">Términos y Condiciones</a></li>
+      <li><a href="#">Política de Privacidad</a></li>
+    </ul>
   </div>
 </footer>
 
