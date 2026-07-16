@@ -14,18 +14,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ---------- MENÚ MÓVIL ----------
-const menuToggle = document.getElementById('menuToggle');
-const mainNav = document.getElementById('mainNav');
-if (menuToggle && mainNav) {
-  menuToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('menu-open');
-  });
-  mainNav.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => mainNav.classList.remove('menu-open'));
-  });
-}
-
 // ---------- CARRUSEL DE FOTOS DEL PRODUCTO ----------
 (function () {
   const slider = document.getElementById('productSlider');

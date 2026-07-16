@@ -129,16 +129,19 @@ header{
 .nav-links a:hover::after{ width:100%; }
 
 .btn{
-  display:inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 0.95rem 2rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   cursor: pointer;
-  border: 1px solid var(--color-gold);
+  border: 1.5px solid var(--color-gold);
   transition: all var(--transition-fast);
   text-align:center;
+  line-height: 1.2;
 }
 
 .btn-primary{ background: var(--color-gold); color: var(--color-white); box-shadow: 0 8px 22px rgba(173,139,94,0.22); }
@@ -147,20 +150,30 @@ header{
 .btn-secondary{ background: transparent; color: var(--color-black); border-color: var(--color-black); }
 .btn-secondary:hover{ background: var(--color-black); color: var(--color-white); }
 
+/* Botón secundario de compra (outline dorado) */
+.btn-buy{
+  background: transparent;
+  color: var(--color-gold-dark);
+  border-color: var(--color-gold);
+}
+.btn-buy:hover{
+  background: var(--color-gold-soft);
+  color: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(173,139,94,0.18);
+}
+
+/* Fila de botones (producto) */
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.75rem;
+}
+
 .btn-whatsapp{ border: 1px solid #25D366; color: #16642f; }
 .btn-whatsapp:hover{ background: #25D366; color: var(--color-white); }
 
 .nav-cta{ font-size: 0.8rem; padding: 0.7rem 1.4rem; }
-
-.menu-toggle{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-  background:none;
-  border:none;
-}
-.menu-toggle span{ width:24px; height:1.5px; background: var(--color-black); }
 
 /* HERO */
 .hero{
@@ -444,18 +457,15 @@ header{
   color: var(--color-black);
 }
 
-/* PRECIO PREMIUM */
+/* PRECIO (estilo editorial: sin tarjeta, solo líneas finas) */
 .price-block{
-  display:inline-flex;
+  display:flex;
   flex-direction:column;
-  gap: 0.15rem;
-  padding: 0.9rem 1.4rem;
+  gap: 0.25rem;
+  padding: 1.1rem 0;
   margin-bottom: var(--space-md);
-  background: linear-gradient(150deg, #FFFFFF 0%, #FBF6EE 100%);
-  border: 1px solid var(--color-gold-line);
-  border-left: 3px solid var(--color-gold);
-  border-radius: 12px;
-  box-shadow: 0 10px 26px rgba(173,139,94,0.12);
+  border-top: 1px solid var(--color-gold-line);
+  border-bottom: 1px solid var(--color-gold-line);
 }
 .price-label{
   font-size: 0.72rem;
@@ -805,11 +815,55 @@ footer::before{
 }
 
 @media (max-width: 720px){
+  /* Header: sin menú ni CTA, logo más chico y centrado */
   .nav-links, .nav-cta{ display:none; }
-  .menu-toggle{ display:flex; }
+  .nav{ justify-content:center; padding: 0.95rem var(--space-md); }
+  .logo img{ height: 15px; }
+
+  /* Hero más compacto y pegado a la sección siguiente */
+  .hero{ padding-top: 6.5rem; padding-bottom: var(--space-md); }
+
+  /* Chips de confianza: las tres una al lado de la otra */
+  .trust-chips{ flex-wrap:nowrap; gap: 0.5rem; }
+  .trust-chips li{
+    flex: 1 1 0;
+    flex-direction:column;
+    justify-content:flex-start;
+    text-align:center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    padding: 0.6rem 0.35rem;
+    border-radius: 14px;
+  }
+  .trust-chips svg{ width:16px; height:16px; }
+
+  /* Foto del parlante cuadrada */
+  .hero-media{ aspect-ratio: 1/1; }
+
+  /* Secciones con menos aire entre bloques */
+  .section{ padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  #experiencia{ padding-top: var(--space-md); }
 
   .benefits-grid{ grid-template-columns: 1fr; }
   .specs-list{ grid-template-columns: 1fr; }
+
+  /* Cuotas y envío: una al lado de la otra */
+  .offer-badge{ flex-wrap:nowrap; gap: 0.6rem; }
+  .offer-item{
+    flex: 1 1 0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap: 0.45rem;
+    padding: 0.85rem 0.9rem;
+  }
+  .offer-item svg{ width:22px; height:22px; min-width:22px; }
+  .offer-item strong{ font-size: 0.9rem; }
+  .offer-item span{ font-size: 0.76rem; }
+
+  /* Botones del producto: apilados y a lo ancho */
+  .btn-row{ flex-direction:column; gap: 0.7rem; }
+  .btn-row .btn{ width: 100%; }
 
   .footer-inner{
     grid-template-columns: 1fr;
@@ -829,20 +883,4 @@ footer::before{
   }
   .form-head h2{ font-size: 1.35rem; }
   #form-success, #form-error{ padding: 1.2rem 1.4rem; }
-
-  .nav.menu-open .nav-links{
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    top: 100%;
-    left:0; right:0;
-    background: var(--color-bg);
-    padding: var(--space-md);
-    gap: var(--space-sm);
-    border-bottom: 1px solid var(--color-line);
-  }
-  .nav.menu-open .nav-cta{
-    display:inline-block;
-    margin: var(--space-sm) var(--space-md) 0;
-  }
 }
