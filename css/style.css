@@ -169,18 +169,19 @@ header{
   gap: 0.75rem;
 }
 
+/* Mismo verde que el ícono flotante (#4CAF50), sin brillo */
 .btn-whatsapp{
-  background: #25D366;
-  border-color: #25D366;
+  background: #4CAF50;
+  border-color: #4CAF50;
   color: var(--color-white);
-  box-shadow: 0 8px 22px rgba(37,211,102,0.30);
+  box-shadow: 0 6px 16px rgba(23,19,16,0.12);
 }
 .btn-whatsapp:hover{
-  background: #1EBE5B;
-  border-color: #1EBE5B;
+  background: #43A047;
+  border-color: #43A047;
   color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(37,211,102,0.40);
+  box-shadow: 0 10px 22px rgba(23,19,16,0.16);
 }
 
 .nav-cta{ font-size: 0.8rem; padding: 0.7rem 1.4rem; }
@@ -687,8 +688,8 @@ header{
   bottom: 1.4rem;
   right: 1.4rem;
   z-index: 1200;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   display:flex;
   align-items:center;
