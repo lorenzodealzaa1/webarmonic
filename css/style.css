@@ -894,7 +894,7 @@ footer::before{
 
   /* Secciones con menos aire entre bloques */
   .section{ padding-top: 3.5rem; padding-bottom: 3.5rem; }
-  .section-title{ font-size: 1.6rem; }
+  .section-title{ font-size: 1.8rem; }
   #experiencia{ padding-top: var(--space-md); }
 
   .benefits-grid{ grid-template-columns: 1fr; }
