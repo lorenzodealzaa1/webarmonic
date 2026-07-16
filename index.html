@@ -167,6 +167,35 @@ src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"
         <span class="error-msg" id="err-email"></span>
       </div>
 
+      <div class="form-group">
+        <label for="dedicacion">¿A qué te dedicás?</label>
+        <div class="select-wrap">
+          <select id="dedicacion" name="dedicacion" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Relación de dependencia">Relación de dependencia</option>
+            <option value="Profesional independiente">Profesional independiente</option>
+            <option value="Empresario / Dueño de negocio">Empresario / Dueño de negocio</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <span class="error-msg" id="err-dedicacion"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="urgencia">¿Cuándo te gustaría venir?</label>
+        <div class="select-wrap">
+          <select id="urgencia" name="urgencia" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Esta semana">Esta semana</option>
+            <option value="Próximas dos semanas">Próximas dos semanas</option>
+            <option value="Todavía estoy averiguando">Todavía estoy averiguando</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <span class="error-msg" id="err-urgencia"></span>
+      </div>
+
       <div class="form-submit">
         <button type="submit" class="btn-form">
           Reservar mi lugar

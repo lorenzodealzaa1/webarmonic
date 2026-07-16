@@ -508,7 +508,7 @@ header{
   margin: 0;
   display:flex;
   flex-direction:column;
-  gap: 1.5rem;
+  gap: 1.1rem;
   text-align:left;
   box-shadow: 0 24px 60px rgba(23,19,16,0.14);
 }
@@ -524,7 +524,7 @@ header{
 }
 .form-head p{ font-size: 0.92rem; color: #A49C92; }
 
-.form-group{ display:flex; flex-direction:column; gap: 0.65rem; position:relative; }
+.form-group{ display:flex; flex-direction:column; gap: 0.5rem; position:relative; }
 
 .form-group label{
   font-size: 0.95rem;
@@ -552,6 +552,42 @@ header{
 }
 
 .form-group input::placeholder{ color: #6B6862; }
+
+/* Select con la misma estética que los inputs */
+.select-wrap{ position:relative; }
+.select-wrap select{
+  width: 100%;
+  height: 58px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  color: var(--color-white);
+  padding: 0 3rem 0 1.2rem;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-slow), background var(--transition-slow), box-shadow var(--transition-slow);
+}
+.select-wrap select:invalid{ color: #6B6862; }
+.select-wrap select option{ color: var(--color-black); background: var(--color-white); }
+.select-wrap select:focus{
+  outline:none;
+  border-color: var(--color-gold);
+  background: rgba(173,139,94,0.08);
+  box-shadow: 0 0 0 4px rgba(173,139,94,0.16);
+}
+.select-wrap svg{
+  position:absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  stroke: #8A857D;
+  pointer-events:none;
+}
 
 .form-group .error-msg{ font-size: 0.8rem; color: #E28B7D; min-height: 1rem; display:block; }
 
