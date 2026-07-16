@@ -595,7 +595,7 @@ header{
 
 .form-divider{ height: 1px; background: rgba(255,255,255,0.09); margin: -0.25rem 0 0.15rem; }
 
-.form-submit{ display:flex; flex-direction:column; align-items:center; gap: var(--space-sm); }
+.form-submit{ display:flex; flex-direction:column; align-items:center; gap: var(--space-sm); margin-top: 0.9rem; }
 
 .btn-form{
   width: 100%;
