@@ -274,9 +274,14 @@ header{
   cursor: pointer;
   transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .video-audio svg{ width: 15px; height: 15px; min-width: 15px; stroke: currentColor; }
-.video-audio:hover{ border-color: var(--color-gold-line); color: var(--color-gold-dark); background: var(--color-gold-soft); }
+/* El hover solo aplica con mouse: en táctil iOS lo emula y obliga a tocar dos veces */
+@media (hover: hover){
+  .video-audio:hover{ border-color: var(--color-gold-line); color: var(--color-gold-dark); background: var(--color-gold-soft); }
+}
 .video-audio .icon-on{ display:none; }
 .video-audio.audio-on .icon-on{ display:block; }
 .video-audio.audio-on .icon-off{ display:none; }
