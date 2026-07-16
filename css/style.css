@@ -224,6 +224,21 @@ header{
   margin-bottom: var(--space-md);
 }
 
+/* Subtexto tipo CTA que invita a ver el video */
+.hero-copy .hero-sub{
+  display:flex;
+  align-items:center;
+  gap: 0.6rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+.hero-sub svg{
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  color: var(--color-gold);
+}
+
 /* Video de presentación dentro del hero */
 .hero-video{
   position: relative;
@@ -240,6 +255,32 @@ header{
   object-fit: cover;
   display: block;
 }
+
+/* Botón de play sobre el poster */
+.video-play{
+  position:absolute;
+  inset: 0;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+.video-play svg{
+  width: 28px;
+  height: 28px;
+  fill: var(--color-gold-dark);
+  margin-left: 3px;
+}
+.video-play:hover{ transform: scale(1.08); background: var(--color-white); }
+.hero-video.is-playing .video-play{ display:none; }
 
 /* FORMULARIO EN EL HERO */
 .hero-form{ position: sticky; top: 6.5rem; }
@@ -674,7 +715,7 @@ header{
 footer{
   position:relative;
   overflow:hidden;
-  background: #1E1C1A;
+  background: #0D0C0B;
   padding: clamp(90px, 14vw, 170px) var(--space-md);
   border-top: 1px solid rgba(216,195,165,0.08);
 }

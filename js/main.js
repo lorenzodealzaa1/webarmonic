@@ -14,6 +14,28 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => revealObserver.observe(el));
 
+// ---------- VIDEO DEL HERO (click para reproducir con sonido) ----------
+(function () {
+  const wrap = document.getElementById('heroVideo');
+  if (!wrap) return;
+
+  const video = wrap.querySelector('video');
+  const playBtn = wrap.querySelector('.video-play');
+
+  playBtn.addEventListener('click', () => {
+    wrap.classList.add('is-playing');
+    video.controls = true;
+    video.play();
+  });
+
+  // Al terminar vuelve al estado inicial (poster + botón de play).
+  video.addEventListener('ended', () => {
+    wrap.classList.remove('is-playing');
+    video.controls = false;
+    video.currentTime = 0;
+  });
+})();
+
 // ---------- TRACKING CLICS WHATSAPP ----------
 function trackWhatsappClick() {
   if (typeof fbq === 'function') {
