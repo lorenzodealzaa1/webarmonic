@@ -91,8 +91,10 @@ function trackWhatsappClick() {
     fbq('track', 'Contact');
   }
 }
-const whatsappSection = document.getElementById('whatsappSection');
-if (whatsappSection) whatsappSection.addEventListener('click', trackWhatsappClick);
+// Se trackean todos los accesos a WhatsApp (botón de la sección + flotante).
+document.querySelectorAll('.js-wa-track').forEach(el => {
+  el.addEventListener('click', trackWhatsappClick);
+});
 
 // ---------- VALIDACIÓN Y ENVÍO DEL FORMULARIO ----------
 // La reserva se coordina únicamente por WhatsApp: al enviar, se abre el chat
