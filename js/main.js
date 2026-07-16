@@ -20,26 +20,33 @@ revealEls.forEach(el => revealObserver.observe(el));
   if (!wrap) return;
 
   const video = wrap.querySelector('video');
-  const audioBtn = wrap.querySelector('.video-audio');
+  const audioBtn = document.getElementById('videoAudioBtn');
   const label = audioBtn.querySelector('span');
 
   // El navegador puede bloquear o pausar el autoplay (ahorro de energía,
-  // pestaña en segundo plano): se reintenta al cargar y al volver a la pestaña.
+  // pestaña en segundo plano, modo bajo consumo en iPhone): se reintenta
+  // al cargar, al volver a la pestaña y con el primer toque en la página.
   function tryPlay() {
     const p = video.play();
     if (p && p.catch) p.catch(function () {});
   }
   tryPlay();
+  video.addEventListener('loadeddata', function () {
+    if (video.paused) tryPlay();
+  });
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden && video.paused) tryPlay();
   });
+  document.addEventListener('pointerdown', function () {
+    if (video.paused) tryPlay();
+  }, { once: true });
 
   audioBtn.addEventListener('click', () => {
     video.muted = !video.muted;
-    wrap.classList.toggle('audio-on', !video.muted);
+    audioBtn.classList.toggle('audio-on', !video.muted);
     label.textContent = video.muted ? 'Activar audio' : 'Silenciar';
     audioBtn.setAttribute('aria-label', label.textContent);
-    if (!video.muted && video.paused) video.play();
+    if (video.paused) tryPlay();
   });
 })();
 
