@@ -11,9 +11,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WHHGTXCG');</script>
 <!-- End Google Tag Manager -->
-<title>ARMONIC | STUDIO MK-1000 — Escuchalo en vivo en Recoleta</title>
-<meta name="description" content="Reservá tu lugar para escuchar el STUDIO MK-1000 en vivo, en una experiencia privada de audio en Recoleta, Buenos Aires. Cupos limitados, solo con reserva previa. 6 cuotas sin interés y envío gratis a todo el país.">
-<meta name="keywords" content="ARMONIC, STUDIO MK-1000, parlante premium, experiencia de escucha, audio de alta fidelidad, Recoleta, Buenos Aires, reservar demostración">
+<title>ARMONIC | STUDIO MK-1000 — Escuchalo en Buenos Aires o Neuquén</title>
+<meta name="description" content="Reservá tu lugar para escuchar el STUDIO MK-1000 en vivo, en una experiencia privada de audio en Recoleta, Buenos Aires, o en Neuquén. Cupos limitados, solo con reserva previa. 6 cuotas sin interés y envío gratis a todo el país.">
+<meta name="keywords" content="ARMONIC, STUDIO MK-1000, parlante premium, experiencia de escucha, audio de alta fidelidad, Recoleta, Buenos Aires, Neuquén, reservar demostración">
 <meta name="author" content="ARMONIC">
 <meta name="robots" content="index, follow">
 
@@ -26,8 +26,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="ARMONIC">
 <meta property="og:locale" content="es_AR">
 <meta property="og:url" content="https://www.armonicmusic.info/">
-<meta property="og:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en vivo en Recoleta">
-<meta property="og:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta. Cupos limitados, solo con reserva previa.">
+<meta property="og:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en Buenos Aires o Neuquén">
+<meta property="og:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta, Buenos Aires, o en Neuquén. Cupos limitados, solo con reserva previa.">
 <meta property="og:image" content="https://www.armonicmusic.info/assets/img/og-armonic.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,8 +35,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en vivo en Recoleta">
-<meta name="twitter:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta. Cupos limitados, solo con reserva previa.">
+<meta name="twitter:title" content="ARMONIC | Escuchá el STUDIO MK-1000 en Buenos Aires o Neuquén">
+<meta name="twitter:description" content="Reservá tu experiencia privada de escucha del STUDIO MK-1000 en Recoleta, Buenos Aires, o en Neuquén. Cupos limitados, solo con reserva previa.">
 <meta name="twitter:image" content="https://www.armonicmusic.info/assets/img/og-armonic.jpg">
 <!-- ============================================================ -->
 
@@ -56,17 +56,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "ARMONIC",
-  "description": "Experiencia privada de escucha del parlante premium STUDIO MK-1000 en Recoleta, Buenos Aires. Demostraciones con reserva previa.",
+  "description": "Experiencia privada de escucha del parlante premium STUDIO MK-1000 en Recoleta, Buenos Aires, o en Neuquén. Demostraciones con reserva previa.",
   "image": "https://www.armonicmusic.info/assets/img/og-armonic.jpg",
   "url": "https://www.armonicmusic.info/",
   "telephone": "+54 9 11 6099-1023",
   "priceRange": "$$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Recoleta",
-    "addressRegion": "Buenos Aires",
-    "addressCountry": "AR"
-  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Recoleta",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Neuquén",
+      "addressRegion": "Neuquén",
+      "addressCountry": "AR"
+    }
+  ],
   "areaServed": "AR",
   "makesOffer": {
     "@type": "Offer",
@@ -207,6 +215,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="error-msg" id="err-urgencia"></span>
       </div>
 
+      <div class="form-group">
+        <label for="sede">¿Dónde te gustaría escucharlo?</label>
+        <div class="select-wrap">
+          <select id="sede" name="sede" required>
+            <option value="" disabled selected>Seleccioná una sede</option>
+            <option value="Recoleta, Buenos Aires">Recoleta, Buenos Aires</option>
+            <option value="Neuquén">Neuquén</option>
+          </select>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <span class="error-msg" id="err-sede"></span>
+      </div>
+
       <div class="form-submit">
         <button type="submit" class="btn-form">
           Reservar mi lugar
@@ -253,7 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 5-9 13L3 8z"/><path d="M3 8h18M9 3 7.5 8 12 21M15 3l1.5 5L12 21"/></svg>
       </div>
       <span class="num">03</span>
-      <h3>Un encuentro exclusivo en Recoleta</h3>
+      <h3>Un encuentro exclusivo en Buenos Aires o Neuquén</h3>
       <p>Turnos reducidos y personalizados para que la atención sea 100% tuya. Por eso trabajamos únicamente con reserva previa.</p>
     </div>
   </div>
@@ -294,7 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="btn-row">
         <a href="#reserva" class="btn btn-primary">Quiero conocer el parlante</a>
-        <a href="https://armonic.ar/" target="_blank" rel="noopener" class="btn btn-buy">Quiero comprarlo</a>
+        <a href="https://armonic.ar/product/studio-mk-1000/" target="_blank" rel="noopener" class="btn btn-buy">Quiero comprarlo</a>
       </div>
     </div>
   </div>
@@ -339,7 +360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-logo-wrap">
         <img src="assets/img/logo-armonic-blanco.png" alt="ARMONIC — Audio premium STUDIO MK-1000" class="footer-logo">
       </div>
-      <p class="footer-desc">ARMONIC crea experiencias privadas de escucha en Recoleta, Buenos Aires. Descubrí el <strong>STUDIO MK-1000</strong>, un parlante premium de alta fidelidad, en vivo y con reserva previa.</p>
+      <p class="footer-desc">ARMONIC crea experiencias privadas de escucha en Recoleta, Buenos Aires, y en Neuquén. Descubrí el <strong>STUDIO MK-1000</strong>, un parlante premium de alta fidelidad, en vivo y con reserva previa.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/veylor.store/" target="_blank" rel="noopener" class="social-icon" aria-label="Seguir a ARMONIC en Instagram">
           <img src="assets/img/icon-instagram.png" alt="">
@@ -365,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <address class="footer-contact">
         <p class="footer-contact-item">
           <img src="assets/img/icon-ubicacion.png" alt="">
-          Recoleta, Buenos Aires, Argentina
+          Recoleta, Buenos Aires, y Neuquén, Argentina
         </p>
         <p class="footer-contact-item">
           <img src="assets/img/icon-whatsapp.png" alt="">

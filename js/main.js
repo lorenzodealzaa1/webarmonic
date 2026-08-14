@@ -112,6 +112,11 @@ function validateForm(data) {
     valid = false;
   }
 
+  if (!data.sede) {
+    showError('sede', 'Seleccioná una sede.');
+    valid = false;
+  }
+
   return valid;
 }
 
@@ -138,6 +143,7 @@ function buildWhatsappMessage() {
   const email = document.getElementById('email').value.trim();
   const dedicacion = document.getElementById('dedicacion').value;
   const urgencia = document.getElementById('urgencia').value;
+  const sede = document.getElementById('sede').value;
   return [
     '¡Hola Armonic! Quiero reservar mi lugar para conocer el STUDIO MK-1000 en vivo.',
     '',
@@ -147,7 +153,8 @@ function buildWhatsappMessage() {
     '• Teléfono: ' + telefono,
     '• Mail: ' + email,
     '• Me dedico a: ' + dedicacion,
-    '• Cuándo me gustaría ir: ' + urgencia
+    '• Cuándo me gustaría ir: ' + urgencia,
+    '• Sede que prefiero: ' + sede
   ].join('\n');
 }
 
@@ -168,7 +175,8 @@ if (form) {
       telefono: document.getElementById('telefono').value,
       email: document.getElementById('email').value,
       dedicacion: document.getElementById('dedicacion').value,
-      urgencia: document.getElementById('urgencia').value
+      urgencia: document.getElementById('urgencia').value,
+      sede: document.getElementById('sede').value
     };
 
     if (!validateForm(data)) return;
