@@ -56,7 +56,7 @@ function trackWhatsappClick() {
     fbq('track', 'Contact');
   }
 }
-// Se trackean todos los accesos a WhatsApp (botón de la sección + flotante).
+// Se trackean los accesos directos a WhatsApp.
 document.querySelectorAll('.js-wa-track').forEach(el => {
   el.addEventListener('click', trackWhatsappClick);
 });
@@ -84,21 +84,6 @@ function validateForm(data) {
 
   if (!data.nombre.trim()) {
     showError('nombre', 'Ingresá tu nombre y apellido.');
-    valid = false;
-  }
-
-  const telefonoLimpio = data.telefono.replace(/\s|-/g, '');
-  if (!telefonoLimpio || telefonoLimpio.length < 8) {
-    showError('telefono', 'Ingresá un teléfono válido.');
-    valid = false;
-  }
-
-  const emailLimpio = data.email.trim();
-  if (!emailLimpio) {
-    showError('email', 'Ingresá tu email.');
-    valid = false;
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailLimpio)) {
-    showError('email', 'Ingresá un email válido.');
     valid = false;
   }
 
@@ -139,8 +124,6 @@ const WHATSAPP_NUMERO = '5491160991023';
 // campo por su id existente.
 function buildWhatsappMessage() {
   const nombre = document.getElementById('nombre').value.trim();
-  const telefono = document.getElementById('telefono').value.trim();
-  const email = document.getElementById('email').value.trim();
   const dedicacion = document.getElementById('dedicacion').value;
   const urgencia = document.getElementById('urgencia').value;
   const sede = document.getElementById('sede').value;
@@ -150,8 +133,6 @@ function buildWhatsappMessage() {
     'Mis datos:',
     '',
     '• Nombre: ' + nombre,
-    '• Teléfono: ' + telefono,
-    '• Mail: ' + email,
     '• Me dedico a: ' + dedicacion,
     '• Cuándo me gustaría ir: ' + urgencia,
     '• Sede que prefiero: ' + sede
@@ -172,8 +153,6 @@ if (form) {
 
     const data = {
       nombre: document.getElementById('nombre').value,
-      telefono: document.getElementById('telefono').value,
-      email: document.getElementById('email').value,
       dedicacion: document.getElementById('dedicacion').value,
       urgencia: document.getElementById('urgencia').value,
       sede: document.getElementById('sede').value

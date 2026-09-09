@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO + FORMULARIO -->
 <section class="hero">
   <div class="hero-copy reveal">
-    <h1>El equilibrio ideal<br>entre <span class="gold">arte y sonido</span></h1>
+    <h1>Reservá tu visita<br><span class="gold">y viví la experiencia</span></h1>
 
     <p class="hero-sub">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor" opacity="0.14"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>
@@ -156,7 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       ================================================================
       La reserva se coordina por WhatsApp: al enviar, se abre el chat con
       los datos ya cargados (ver js/main.js). Los IDs de los campos y de
-      los mensajes de éxito/error NO deben cambiar: el JS depende de ellos.
+      los mensajes de validación dependen de ese script.
 
       Para conectar un backend (Formspree / Google Sheets / Zapier) más
       adelante, ver las notas en js/main.js.
@@ -172,18 +172,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
         <span class="error-msg" id="err-nombre"></span>
-      </div>
-
-      <div class="form-group">
-        <label for="telefono">Teléfono / WhatsApp</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="11 1234 5678">
-        <span class="error-msg" id="err-telefono"></span>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="tu@email.com">
-        <span class="error-msg" id="err-email"></span>
       </div>
 
       <div class="form-group">
@@ -409,11 +397,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
   </div>
 </footer>
-
-<!-- BOTÓN FLOTANTE DE WHATSAPP -->
-<a href="https://wa.me/5491160991023?text=Hola!%20Vengo%20de%20la%20web%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20parlante%20Armonic%2C%20donde%20se%20puede%20escuchar%3F" target="_blank" rel="noopener" class="whatsapp-float js-wa-track" aria-label="Escribinos por WhatsApp">
-  <img src="assets/img/icon-whatsapp.png" alt="WhatsApp">
-</a>
 
 <script src="js/main.js"></script>
 </body>

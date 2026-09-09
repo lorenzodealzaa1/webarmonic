@@ -730,29 +730,6 @@ header{
   margin: 0 auto var(--space-md);
 }
 
-/* BOTÓN FLOTANTE DE WHATSAPP (flota con una animación sutil) */
-@keyframes wa-float-bob{
-  0%, 100%{ transform: translateY(0); }
-  50%{ transform: translateY(-7px); }
-}
-.whatsapp-float{
-  position: fixed;
-  bottom: 1.4rem;
-  right: 1.4rem;
-  z-index: 1200;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.30));
-  animation: wa-float-bob 3.2s ease-in-out infinite;
-  transition: filter var(--transition-fast);
-}
-.whatsapp-float img{ width: 100%; height: 100%; display:block; }
-.whatsapp-float:hover{ filter: drop-shadow(0 14px 26px rgba(0,0,0,0.38)); }
-
 /* FOOTER */
 footer{
   position:relative;
