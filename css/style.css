@@ -220,25 +220,13 @@ header{
 .btn-secondary{ background: transparent; color: var(--color-black); border-color: var(--color-black); }
 .btn-secondary:hover{ background: var(--color-black); color: var(--color-white); }
 
-/* Botón secundario (outline dorado) */
-.btn-outline{
-  background: transparent;
-  color: var(--color-gold-dark);
-  border-color: var(--color-gold);
-}
-.btn-outline:hover{
-  background: var(--color-gold-soft);
-  color: var(--color-gold-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(173,139,94,0.18);
-}
-
-/* Fila de botones (producto) */
+/* Fila de botones (hero y producto) */
 .btn-row{
   display:flex;
   flex-wrap:wrap;
   gap: 0.75rem;
 }
+.btn-row .btn{ flex: 1 1 auto; }
 
 /* Mismo verde que el ícono flotante (#4CAF50), sin brillo */
 .btn-whatsapp{
@@ -859,8 +847,6 @@ header{
 }
 .visit-step h3{ font-size: 1.15rem; font-weight: 600; margin-bottom: var(--space-xs); }
 .visit-step p{ color: var(--color-warm-gray); font-size: 0.95rem; max-width: 300px; }
-.visit-cta{ text-align:center; margin-bottom: var(--space-lg); }
-
 /* WHATSAPP */
 .whatsapp-section{ text-align:center; padding: var(--space-xl) var(--space-md); }
 
