@@ -77,7 +77,7 @@ document.querySelectorAll('.js-wa-track').forEach(el => {
 });
 
 // ---------- VALIDACIÓN Y ENVÍO DEL FORMULARIO ----------
-// La reserva se coordina únicamente por WhatsApp: al enviar, se abre el chat
+// La compra se coordina únicamente por WhatsApp: al enviar, se abre el chat
 // con los datos ya cargados. No hay backend ni registro externo.
 
 const form = document.getElementById('reserva-form');
@@ -107,13 +107,8 @@ function validateForm(data) {
     valid = false;
   }
 
-  if (!data.urgencia) {
-    showError('urgencia', 'Seleccioná una opción.');
-    valid = false;
-  }
-
-  if (!data.sede) {
-    showError('sede', 'Seleccioná una sede.');
+  if (!data.pago) {
+    showError('pago', 'Seleccioná una opción.');
     valid = false;
   }
 
@@ -135,22 +130,20 @@ function handleSubmitSuccess() {
 const WHATSAPP_NUMERO = '5491160991023';
 
 // Arma el texto que se pre-carga en WhatsApp, redactado en primera persona
-// (lo "escribe" la persona que reserva). Toma los valores reales de cada
+// (lo "escribe" la persona que compra). Toma los valores reales de cada
 // campo por su id existente.
 function buildWhatsappMessage() {
   const nombre = document.getElementById('nombre').value.trim();
   const dedicacion = document.getElementById('dedicacion').value;
-  const urgencia = document.getElementById('urgencia').value;
-  const sede = document.getElementById('sede').value;
+  const pago = document.getElementById('pago').value;
   return [
-    '¡Hola Armonic! Quiero reservar mi lugar para conocer el STUDIO MK-1000 en vivo.',
+    '¡Hola Armonic! Quiero comprar el STUDIO MK-1000 con el precio de Cyber Monday.',
     '',
     'Mis datos:',
     '',
     '• Nombre: ' + nombre,
     '• Me dedico a: ' + dedicacion,
-    '• Cuándo me gustaría ir: ' + urgencia,
-    '• Sede que prefiero: ' + sede
+    '• Cómo prefiero pagar: ' + pago
   ].join('\n');
 }
 
@@ -169,15 +162,14 @@ if (form) {
     const data = {
       nombre: document.getElementById('nombre').value,
       dedicacion: document.getElementById('dedicacion').value,
-      urgencia: document.getElementById('urgencia').value,
-      sede: document.getElementById('sede').value
+      pago: document.getElementById('pago').value
     };
 
     if (!validateForm(data)) return;
 
     if (formError) formError.style.display = 'none';
 
-    // La reserva se coordina únicamente por WhatsApp: se abre el chat con
+    // La compra se coordina únicamente por WhatsApp: se abre el chat con
     // los datos ya cargados. openWhatsapp() se llama sincrónicamente dentro
     // del click (y antes del reset) para que el navegador no bloquee la
     // ventana y el mensaje se arme con los valores reales.
