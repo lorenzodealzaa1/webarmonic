@@ -153,11 +153,6 @@ header{
   text-transform: uppercase;
   white-space: nowrap;
 }
-.event-tag-hero{
-  background: var(--color-black);
-  color: #E6D3B7;
-  margin-bottom: var(--space-sm);
-}
 
 .nav{
   display:flex;
@@ -268,10 +263,17 @@ header{
   max-width: var(--container-max);
   margin: 0 auto;
   display:grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--space-lg);
+  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "head media"
+    "actions media";
+  gap: var(--space-md) var(--space-lg);
   align-items:start;
 }
+.hero-head{ grid-area: head; }
+.hero-media{ grid-area: media; }
+.hero-actions{ grid-area: actions; }
 
 .eyebrow{
   font-size: 0.78rem;
@@ -283,30 +285,24 @@ header{
   display:block;
 }
 
-.hero-copy h1{
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+.hero-head h1{
+  font-size: clamp(2.2rem, 4.4vw, 3.3rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.12;
-  margin-bottom: var(--space-md);
 }
 
 .gold{ color: var(--color-gold); }
 
-.hero-copy p{
-  color: var(--color-warm-gray);
-  font-size: 1.08rem;
-  max-width: 500px;
-  margin-bottom: var(--space-md);
-}
-
 /* Subtexto tipo CTA que invita a ver el video */
-.hero-copy .hero-sub{
+.hero-sub{
   display:flex;
   align-items:center;
   gap: 0.6rem;
+  font-size: 1.08rem;
   font-weight: 500;
   color: var(--color-black);
+  margin-bottom: var(--space-sm);
 }
 .hero-sub svg{
   width: 26px;
@@ -369,7 +365,7 @@ header{
   justify-content:space-between;
   flex-wrap:wrap;
   gap: 0.9rem 1.5rem;
-  margin-top: 1.4rem;
+  margin-bottom: var(--space-sm);
   padding: 1.1rem 1.35rem;
   background: var(--color-bg-alt);
   border: 1px solid var(--color-gold-line);
@@ -405,8 +401,8 @@ header{
   color: var(--color-warm-gray);
 }
 
-/* FORMULARIO EN EL HERO */
-.hero-form{ position: sticky; top: calc(6.5rem + var(--promo-h)); scroll-margin-top: 5rem; }
+/* FORMULARIO A CONTINUACIÓN DE LOS PASOS DE LA VISITA */
+.visit-form{ max-width: 620px; margin: 0 auto; scroll-margin-top: 5rem; }
 
 /* SECCIONES GENERALES */
 .section{
@@ -858,7 +854,6 @@ header{
 }
 .visit-step h3{ font-size: 1.15rem; font-weight: 600; margin-bottom: var(--space-xs); }
 .visit-step p{ color: var(--color-warm-gray); font-size: 0.95rem; max-width: 300px; }
-.visit-cta{ text-align:center; }
 
 /* WHATSAPP */
 .whatsapp-section{ text-align:center; padding: var(--space-xl) var(--space-md); }
@@ -1029,8 +1024,13 @@ footer::before{
 
 /* RESPONSIVE */
 @media (max-width: 900px){
-  .hero{ grid-template-columns: 1fr; padding-top: calc(7.5rem + var(--promo-h)); gap: var(--space-md); }
-  .hero-form{ position: static; }
+  .hero{
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "head" "media" "actions";
+    padding-top: calc(7.5rem + var(--promo-h));
+    gap: var(--space-md);
+  }
   .benefits-grid{ grid-template-columns: 1fr 1fr; gap: var(--space-md); }
   .product-inner{ grid-template-columns: 1fr; }
   .visit-steps{ grid-template-columns: 1fr; gap: var(--space-md); }
