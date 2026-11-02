@@ -372,10 +372,13 @@ header{
   border-radius: 14px;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
-.hero-offer:hover{
-  border-color: var(--color-gold);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(173,139,94,0.16);
+/* El hover solo aplica con mouse: en táctil queda pegado después de tocar */
+@media (hover: hover){
+  .hero-offer:hover{
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(173,139,94,0.16);
+  }
 }
 .hero-offer-price{ display:flex; flex-direction:column; gap: 0.15rem; }
 .hero-offer-label{
@@ -400,6 +403,8 @@ header{
   font-weight: 500;
   color: var(--color-warm-gray);
 }
+/* Los íconos solo se muestran en la versión mobile */
+.hero-offer-term .promo-icon{ display:none; }
 
 /* FORMULARIO A CONTINUACIÓN DE LOS PASOS DE LA VISITA */
 .visit-form{ max-width: 620px; margin: 0 auto; scroll-margin-top: 5rem; }
@@ -1075,8 +1080,50 @@ footer::before{
   .price-value{ font-size: 2.35rem; white-space: nowrap; }
   .price-value .price-cur{ font-size: 0.78rem; }
   .price-note, .price-transfer-text{ font-size: 0.88rem; }
-  .hero-offer{ padding: 1rem 1.1rem; }
-  .hero-offer-price strong{ font-size: 1.5rem; }
+
+  /* Resumen de la oferta: tarjeta oscura con precio grande y 3 beneficios */
+  .hero-offer{
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:stretch;
+    gap: 1rem;
+    padding: 1.3rem 1.1rem 1.15rem;
+    background: linear-gradient(165deg, #211C17, #171310);
+    border-color: #34291F;
+    box-shadow: 0 18px 44px rgba(23,19,16,0.14);
+  }
+  .hero-offer-price{ align-items:center; text-align:center; gap: 0.3rem; }
+  .hero-offer-label{ color: #E6D3B7; }
+  .hero-offer-price strong{ font-size: 2.35rem; color: var(--color-white); }
+  .hero-offer-terms{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(216,195,165,0.18);
+  }
+  .hero-offer-term{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 0.45rem;
+    text-align:center;
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .hero-offer-term .promo-icon{ display:flex; }
+  .hero-offer-sub{
+    display:block;
+    margin-top: 0.15rem;
+    color: #A49C92;
+    font-size: 0.72rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  /* "por" se oculta para que "transferencia" entre en una sola línea */
+  .hero-offer-by{ display:none; }
 
   /* Menos espacio entre el botón de reserva de los pasos y el CTA de WhatsApp */
   .visit-section{ padding-bottom: 2rem; }
