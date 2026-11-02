@@ -220,13 +220,13 @@ header{
 .btn-secondary{ background: transparent; color: var(--color-black); border-color: var(--color-black); }
 .btn-secondary:hover{ background: var(--color-black); color: var(--color-white); }
 
-/* Botón secundario de compra (outline dorado) */
-.btn-buy{
+/* Botón secundario (outline dorado) */
+.btn-outline{
   background: transparent;
   color: var(--color-gold-dark);
   border-color: var(--color-gold);
 }
-.btn-buy:hover{
+.btn-outline:hover{
   background: var(--color-gold-soft);
   color: var(--color-gold-dark);
   transform: translateY(-2px);
