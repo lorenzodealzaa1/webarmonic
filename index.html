@@ -79,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "makesOffer": {
     "@type": "Offer",
     "priceCurrency": "ARS",
-    "price": "2580000",
+    "price": "1999999",
     "itemOffered": {
       "@type": "Product",
       "name": "STUDIO MK-1000",
@@ -119,6 +119,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HEADER -->
 <header>
+  <!-- FRANJA CYBER MONDAY (js/main.js clona el grupo para el loop) -->
+  <div class="promo-bar" role="region" aria-label="Ofertas de Cyber Monday">
+    <div class="promo-track" id="promoTrack">
+      <ul class="promo-group">
+        <li>
+          <span class="promo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><path d="M8 8h.01"/></svg></span>
+          Cyber Monday: precio especial de preventa
+        </li>
+        <li>
+          <span class="promo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+          6 cuotas sin interés
+        </li>
+        <li>
+          <span class="promo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg></span>
+          Envío gratis a todo el país
+        </li>
+        <li>
+          <span class="promo-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span>
+          15% off por transferencia
+        </li>
+      </ul>
+    </div>
+  </div>
   <nav class="nav" id="mainNav">
     <a href="#" class="logo" aria-label="ARMONIC — inicio"><img src="assets/img/logo-armonic-negro.png" alt="ARMONIC"></a>
     <ul class="nav-links">
@@ -133,6 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO + FORMULARIO -->
 <section class="hero">
   <div class="hero-copy reveal">
+    <span class="event-tag event-tag-hero">Cyber Monday · Preventa</span>
     <h1>Reservá tu visita<br><span class="gold">y viví la experiencia</span></h1>
 
     <p class="hero-sub">
@@ -148,6 +172,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
       <span>Activar audio</span>
     </button>
+
+    <a href="#producto" class="hero-offer">
+      <span class="hero-offer-price">
+        <span class="hero-offer-label">Precio especial de preventa</span>
+        <strong>$1.999.999 <span class="price-cur">ARS</span></strong>
+      </span>
+      <span class="hero-offer-terms">
+        <span>6 cuotas sin interés</span>
+        <span>Envío gratis</span>
+        <span>15% off por transferencia</span>
+      </span>
+    </a>
   </div>
 
   <!-- FORMULARIO DE RESERVA (tarjeta premium, arriba de todo) -->
@@ -279,21 +315,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Una pieza que transforma cualquier ambiente: diseño que enamora a la vista y un sonido que te hace redescubrir tus canciones favoritas.</p>
 
       <div class="price-block">
-        <div class="price-col">
-          <span class="price-label">Valor de contado</span>
-          <span class="price-cash-value">$2.580.000 <span class="price-cur">ARS</span></span>
+        <div class="price-head">
+          <span class="event-tag">Cyber Monday</span>
+          <span class="price-label">Precio especial de preventa</span>
         </div>
-        <div class="price-divider" aria-hidden="true"></div>
-        <div class="price-col">
-          <span class="price-value">$430.000 <span class="price-cur">ARS</span></span>
-          <span class="price-note">en 6 cuotas sin interés</span>
+        <div class="price-main">
+          <span class="price-old">Antes <s>$2.580.000</s></span>
+          <span class="price-value">$1.999.999 <span class="price-cur">ARS</span></span>
+          <span class="price-note">o 6 cuotas sin interés de $333.333</span>
+        </div>
+        <div class="price-transfer">
+          <span class="price-off">15% OFF</span>
+          <span class="price-transfer-text">por transferencia: <strong>$1.699.999</strong> ARS</span>
         </div>
       </div>
 
       <div class="offer-badge">
         <div class="offer-item">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-          <span><strong>Con tarjeta</strong>todos los días</span>
+          <span><strong>6 cuotas sin interés</strong>con tarjeta</span>
         </div>
         <div class="offer-item">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg>

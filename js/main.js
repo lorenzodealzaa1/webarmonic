@@ -14,6 +14,21 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealEls.forEach(el => revealObserver.observe(el));
 
+// ---------- FRANJA CYBER MONDAY ----------
+// El track se desplaza -50%, así que la cantidad total de grupos tiene que ser
+// par. Con 6 grupos el loop no deja huecos ni en pantallas muy anchas.
+(function () {
+  const track = document.getElementById('promoTrack');
+  if (!track) return;
+
+  const group = track.querySelector('.promo-group');
+  for (let i = 0; i < 5; i++) {
+    const clone = group.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  }
+})();
+
 // ---------- VIDEO DEL HERO (autoplay silenciado + botón de audio) ----------
 (function () {
   const wrap = document.getElementById('heroVideo');
